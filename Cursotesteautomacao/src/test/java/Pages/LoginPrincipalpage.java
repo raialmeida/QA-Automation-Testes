@@ -8,19 +8,7 @@ public class LoginPrincipalpage extends BasePage {
 	public LoginPrincipalpage(WebDriver navegador) {
 		super(navegador);
 		
-		/**
-		 * Instancia privada do webDriver que vira da suite de teste
-		 
-		private static final WebDriver driver;
-		private static final WebDriverWait wait;
-
-		/**
-		 * Construtor que ira adicionar a instancia do WebDriver para utilizacao dos metodos
-		 *
-		static {
-			driver = Selenium.getDriver();
-			wait = new WebDriverWait(driver, 10);
-		*/
+	
 	}
 
 	public LoginPrincipalpage DigitarLogin(String login) {

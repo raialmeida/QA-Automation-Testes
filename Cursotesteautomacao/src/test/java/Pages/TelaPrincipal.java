@@ -13,7 +13,7 @@ public class TelaPrincipal extends BasePage {
 	}
 	public TelaPrincipal TextoLogado() {
 		String saudacao = navegador.findElement(By.className("me")).getText(); 
-		assertEquals("Hi, Raí Almeida", saudacao);
+		assertEquals("Hi, RaÃ­ Almeida", saudacao);
 		return this;	
   }
 	  public AdicionarContato ClicarLinkText() {

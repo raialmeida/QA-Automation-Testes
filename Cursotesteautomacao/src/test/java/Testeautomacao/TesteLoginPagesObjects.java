@@ -18,20 +18,19 @@ public class TesteLoginPagesObjects {
 	@Before
 	public void testLogin() {
 
-		//navegador = Navegador.cerateBrowserStack();
+		
 		navegador = Navegador.IniciaNavegador();
 	}
 
 	@Test
-	public void Login(
-			/**@Param (name ="login")String login, 
-			@Param (name ="senha") String senha, 
-			@Param (name ="MensagemGravar") String textomensagem*/) {
+	public void Login() {
 				
-		String TextoGravar = new LoginPage(navegador)
+		//String TextoGravar = 
+			new LoginPage(navegador)
 		     .ClickSignin()
-		     .FazerLogin("Raí", "123456")
+		     .FazerLogin("RaÃ­", "123456")
 		     .TextoLogado()
+		     /*
 		     .ClicarLinkText()
 		     .ClicarNaAbaMoreData()
 		     .ClicarNoBotaoAddMoreData()
@@ -39,11 +38,12 @@ public class TesteLoginPagesObjects {
 		     .DigitarConatato("011946857033")
 		      //.AddContato("Phone", "011946857033")
 		     .ClicarEmSalvar() 
-		     .TextoGravar(); 
+		     
+		    // .TextoGravar(); 
 		
 		assertEquals("Your contact has been added!", TextoGravar); 
-		
-		 //Mudar o metodo para Login depois    
+		*/
+		   ;  
 		      
 	}
 

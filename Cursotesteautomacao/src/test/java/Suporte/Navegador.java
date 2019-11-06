@@ -11,15 +11,17 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Navegador {
 
-	public static final String USERNAME = "raalmeidaandrade1";
-	public static final String AUTOMATE_KEY = "pu834ZxvhCzMCStw4q6F";
+	public static final String USERNAME = "XXXXXXXXXXX";
+	public static final String AUTOMATE_KEY = "XXXXXXXXXXXXX";
 	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
-	
+	/**
+	 * Iniciar Navegador
+	 * @author Raí Almeida
+	 */
 	public static WebDriver IniciaNavegador() {
 
 		// Abrindo o ChromeDriver
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Ra� Almeida\\git\\Estudos-QA-Automation\\Cursotesteautomacao\\target\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
 		WebDriver navegador = new ChromeDriver();
 		navegador.manage().window().maximize();
 		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -30,7 +32,10 @@ public class Navegador {
 		return navegador;
 	}
 
-
+/***
+ * Método Para Rodar na nuvem
+ * @author Raí Almeida
+ */
 	public static WebDriver cerateBrowserStack() {
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("browser", "Chrome");
@@ -53,7 +58,7 @@ public class Navegador {
 
 		return navegador;
 
-	}
+	} 
 }
 
 
