@@ -5,13 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 public class BasePage {
 	
-	protected WebDriver navegador;
+	protected WebDriver driver;
 	
-	public BasePage(WebDriver navegador) {
-		this.navegador = navegador;
+	public BasePage(WebDriver driver) {
+		this.driver = driver;
 	}
    public String TextoGravar() {
-	return navegador.findElement(By.id("toast-container")).getText();
+	return driver.findElement(By.id("toast-container")).getText();
 	   
 	   
    }

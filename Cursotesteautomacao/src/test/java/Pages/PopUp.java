@@ -7,14 +7,14 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PopUp extends BasePage {
 
-	public PopUp(WebDriver navegador) {
-		super(navegador);
+	public PopUp(WebDriver driver) {
+		super(driver);
 
 	}
 
 	public PopUp SelectTipo(String tipo) {
 
-		WebElement campotype = navegador.findElement(By.id("addmoredata")).findElement(By.name("type"));
+		WebElement campotype = driver.findElement(By.id("addmoredata")).findElement(By.name("type"));
 		new Select(campotype).selectByVisibleText(tipo);
 
 		return this;
@@ -22,15 +22,15 @@ public class PopUp extends BasePage {
 
 	public PopUp DigitarConatato(String contato) {
 		
-		navegador.findElement(By.id("addmoredata")).findElement(By.name("contact")).sendKeys(contato);
+		driver.findElement(By.id("addmoredata")).findElement(By.name("contact")).sendKeys(contato);
 		return this;
 	}
 
 	public AdicionarContato ClicarEmSalvar() {
 		
-		navegador.findElement(By.id("addmoredata")).findElement(By.linkText("SAVE")).click();
+		driver.findElement(By.id("addmoredata")).findElement(By.linkText("SAVE")).click();
 		
-		return new AdicionarContato(navegador);
+		return new AdicionarContato(driver);
 	}
 
 	public PopUp AddContato(String tipo, String contato) {
@@ -39,6 +39,6 @@ public class PopUp extends BasePage {
 		DigitarConatato(contato);
 		ClicarEmSalvar();
 
-		return new PopUp(navegador);
+		return new PopUp(driver);
 	}
 }

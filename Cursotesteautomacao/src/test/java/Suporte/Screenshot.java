@@ -10,10 +10,10 @@ import org.openqa.selenium.WebDriver;
 
 public class Screenshot {
 	/**
-	 * public static void tirar(WebDriver navegador, String arquivo) {
+	 * public static void tirar(WebDriver driver, String arquivo) {
 	 * 
 	 * File screenshot = ((TakesScreenshot)
-	 * navegador).getScreenshotAs(OutputType.FILE);
+	 * driver).getScreenshotAs(OutputType.FILE);
 	 * 
 	 * try { FileUtils.copyFile(screenshot, new File(arquivo)); 
 	 * } catch (Exception
@@ -22,8 +22,8 @@ public class Screenshot {
 	 * 
 	 * }
 	 */
-	public static void takeScreenshot(WebDriver navegador, String fileName) {
-		File scrFile = ((TakesScreenshot) navegador).getScreenshotAs(OutputType.FILE);
+	public static void takeScreenshot(WebDriver driver, String fileName) {
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(scrFile,
 					new File(fileName +".jpeg"),

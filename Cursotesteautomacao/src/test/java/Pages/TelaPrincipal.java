@@ -7,18 +7,18 @@ import org.openqa.selenium.WebDriver;
 
 public class TelaPrincipal extends BasePage {
  
-	  public TelaPrincipal(WebDriver navegador) {
-		super(navegador);
+	  public TelaPrincipal(WebDriver driver) {
+		super(driver);
 		
 	}
 	public TelaPrincipal TextoLogado() {
-		String saudacao = navegador.findElement(By.className("me")).getText(); 
+		String saudacao = driver.findElement(By.className("me")).getText(); 
 		assertEquals("Hi, Raí Almeida", saudacao);
 		return this;	
   }
 	  public AdicionarContato ClicarLinkText() {
-	  navegador.findElement(By.className("me")).click();
-	  return new AdicionarContato(navegador);
+	  driver.findElement(By.className("me")).click();
+	  return new AdicionarContato(driver);
 	  
 	  }
 }

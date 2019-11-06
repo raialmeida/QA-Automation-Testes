@@ -15,21 +15,21 @@ public class Navegador {
 	public static final String AUTOMATE_KEY = "XXXXXXXXXXXXX";
 	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	/**
-	 * Iniciar Navegador
+	 * Iniciar driver
 	 * @author Raí Almeida
 	 */
-	public static WebDriver IniciaNavegador() {
+	public static WebDriver Iniciadriver() {
 
 		// Abrindo o ChromeDriver
 		System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
-		WebDriver navegador = new ChromeDriver();
-		navegador.manage().window().maximize();
-		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		// Navegando para o site
-		navegador.get("http://www.juliodelima.com.br/taskit/");
+		driver.get("http://www.juliodelima.com.br/taskit/");
 
-		return navegador;
+		return driver;
 	}
 
 /***
@@ -46,17 +46,17 @@ public class Navegador {
 	    caps.setCapability("name", "Bstack-[Java] Sample Test");
 		//caps.setCapability("name", "Bstack-[Java] Sample Test"); 
 	    
-		WebDriver navegador = null;
+		WebDriver driver = null;
 		try {
-			navegador = new RemoteWebDriver(new URL(URL), caps);
-			navegador.manage().window().maximize();
-			navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-			navegador.get("http://www.juliodelima.com.br/taskit/");
+			driver = new RemoteWebDriver(new URL(URL), caps);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.get("http://www.juliodelima.com.br/taskit/");
 		} catch (MalformedURLException e) {
 			System.out.println("Houveram Problema com a URL" + e.getMessage());
 		}
 
-		return navegador;
+		return driver;
 
 	} 
 }

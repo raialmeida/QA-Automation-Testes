@@ -13,20 +13,20 @@ import Suporte.Navegador;
 
 
 public class TesteLoginPagesObjects {
-	private WebDriver navegador;
+	private WebDriver driver;
 
 	@Before
-	public void testLogin() {
+	public void SetUp () {
 
 		
-		navegador = Navegador.IniciaNavegador();
+		driver = Navegador.Iniciadriver();
 	}
 
 	@Test
-	public void SetUp() {
+	public void testLogin() {
 				
 		//String TextoGravar = 
-			new LoginPage(navegador)
+			new LoginPage(driver)
 		     .ClickSignin()
 		     .FazerLogin("Raí", "123456")
 		     .TextoLogado()
@@ -50,7 +50,7 @@ public class TesteLoginPagesObjects {
 	@After
 	public void TearDown() {
 
-		navegador.quit();
+		driver.quit();
 
 	}
 }

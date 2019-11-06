@@ -6,15 +6,15 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage extends BasePage {
 
 
-	public LoginPage(WebDriver navegador) {
-		super(navegador);
+	public LoginPage(WebDriver driver) {
+		super(driver);
 		
 	}
 
 	public LoginPrincipalpage ClickSignin() {
-		navegador.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.linkText("Sign in")).click();
 
-		return new LoginPrincipalpage(navegador);
+		return new LoginPrincipalpage(driver);
 	}
 
 }
