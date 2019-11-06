@@ -23,7 +23,7 @@ public class TesteLoginPagesObjects {
 	}
 
 	@Test
-	public void Login() {
+	public void SetUp() {
 				
 		//String TextoGravar = 
 			new LoginPage(navegador)
@@ -48,7 +48,7 @@ public class TesteLoginPagesObjects {
 	}
 
 	@After
-	public void FecharNavegador() {
+	public void TearDown() {
 
 		navegador.quit();
 
