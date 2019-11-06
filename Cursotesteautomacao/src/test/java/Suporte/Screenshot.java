@@ -7,7 +7,11 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
+/**
+ * Classe Para Screenshot
+ * @author Raí Almeida
+ *
+ */
 public class Screenshot {
 	/**
 	 * public static void tirar(WebDriver driver, String arquivo) {
