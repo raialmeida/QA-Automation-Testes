@@ -6,11 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Browser {
-	
-	
-private static  ChromeDriver driver;
 
-	
+	private static ChromeDriver driver;
+
 	public static WebDriver Iniciadriver() {
 
 		// Abrindo o ChromeDriver
@@ -18,14 +16,9 @@ private static  ChromeDriver driver;
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
+  
 		// Navegando para o site
 		driver.get("https://webjump-user.github.io/testqa/");
-		return driver; 
-
-}
-	
-  public static WebDriver getDriver() {
-	  return driver;
-  }
+		return driver;
+	}
 }
