@@ -9,7 +9,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class TesteWebJumbStepsIframeButtons {
-
+ 
 	protected WebDriver driver;
 	
 	TesteWebJumbPages2 TesteWebJumbPages2 = new TesteWebJumbPages2(driver);
@@ -37,5 +37,6 @@ public class TesteWebJumbStepsIframeButtons {
 	public void verificarSeOsBotoesAindaEstaoNaTelaDoPainelIFRAMEBUTTONS() throws Throwable {
          TesteWebJumbPages2.verificarAusenciaBotaoIFrameButtons(driver);
 	}
+	
 
 }
