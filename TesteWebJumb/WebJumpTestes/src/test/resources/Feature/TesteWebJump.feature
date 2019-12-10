@@ -1,18 +1,19 @@
 
 Feature: Crie um cenario onde clicamos nos botoes "One", "Two, e "Four", 
 depois verifique a ausencia dos mesmos
-
+@ignore
 Scenario: Clicar no botao "One", "Two, e "Four" e verifique a ausencia dos mesmos
 
 Given que eu acesse a pagina https://webjump-user.github.io/testqa/
 When no painel Buttons e exibido os botoes 'One', 'Two', e 'Four'
 And clicar no botao 'One', 'Two', e 'Four'
 Then verificar se os botoes ainda estao na tela
+Then Fechar navegador
 
 Scenario: Clicar no botao "One", "Two, e "Four" e verifique a ausencia dos mesmos 
 do painel "IFRAME BUTTONS"
 
-#Given que eu acesse a pagina https://webjump-user.github.io/testqa
+Given que eu acesse a pagina https://webjump-user.github.io/testqa
 Given  no painel iframe buttons Buttons e exibido os botoes 'One', 'Two', e 'Four'
 When  clicar no botao 'One', 'Two', e 'Four'do painel IFRAME BUTTONS
 Then  verificar se os botoes ainda estao na tela do painel IFRAME BUTTONS

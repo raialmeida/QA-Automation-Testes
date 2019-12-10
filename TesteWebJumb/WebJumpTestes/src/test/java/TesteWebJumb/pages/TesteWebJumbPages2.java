@@ -1,46 +1,46 @@
 package TesteWebJumb.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TesteWebJumbPages extends TesteWebJumbPagesBase {
+public class TesteWebJumbPages2 extends TesteWebJumbPages {
 
-	@FindBy(id = "btn_one")
-	private WebElement btn;
-
-	@FindBy(id = "btn_two")
-	protected String btn_two;
-
-	@FindBy(id = "btn_link")
-	protected String btn_link;
-
-	public TesteWebJumbPages(WebDriver driver) {
+	public TesteWebJumbPages2(WebDriver driver) {
 		super(driver);
+
 	}
 
-	public void verificarbotaoNaTel(WebDriver driver) {
+	/*
+	 * 
+	 * Segundo cenario
+	 */
+	public void verificarbotaoNoPaineIFrameButton(WebDriver driver) {
+
+		driver.switchTo().frame(driver.findElement(By.xpath("(//iframe[contains(@src,'buttons.html')])[1]")));
+
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_one")));
-
+ 
 	}
 
-	public void clicarbotao(WebDriver driver) {
-	
+	public void clicarBotaoNoPaineIFrameButtons(WebDriver driver) {
+
 		driver.findElement(By.id("btn_one")).click();
 		driver.findElement(By.id("btn_link")).click();
 		driver.findElement(By.id("btn_two")).click();
 
 	}
 
-	public void verificarAusencia(WebDriver driver) {
+	public void verificarAusenciaBotaoIFrameButtons(WebDriver driver) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("btn_one")));
-		
+		driver.switchTo().defaultContent();
+
 	}
 
 }
