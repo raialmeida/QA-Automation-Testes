@@ -32,14 +32,17 @@ public class TesteWebJumbPages extends TesteWebJumbPagesBase {
 	public void verificarbotaoNaTel(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_one")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_two")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_link")));
 
 	}
 
 	public void clicarbotao(WebDriver driver) {
 
 		driver.findElement(By.id("btn_one")).click();
-		driver.findElement(By.id("btn_link")).click();
 		driver.findElement(By.id("btn_two")).click();
+		driver.findElement(By.id("btn_link")).click();
+		
 
 	}
 
@@ -47,6 +50,8 @@ public class TesteWebJumbPages extends TesteWebJumbPagesBase {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("btn_one")));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("btn_two")));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("btn_link")));
 
 	}
 

@@ -24,14 +24,17 @@ public class TesteWebJumbPages2 extends TesteWebJumbPages {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_one")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_two")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_link")));
  
 	}
 
 	public void clicarBotaoNoPaineIFrameButtons(WebDriver driver) {
 
 		driver.findElement(By.id("btn_one")).click();
-		driver.findElement(By.id("btn_link")).click();
 		driver.findElement(By.id("btn_two")).click();
+		driver.findElement(By.id("btn_link")).click();
+		
 
 	}
 
@@ -39,7 +42,10 @@ public class TesteWebJumbPages2 extends TesteWebJumbPages {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("btn_one")));
-		driver.switchTo().defaultContent();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("btn_two")));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("btn_link")));
+		
+		//driver.switchTo().defaultContent();
 
 	}
 

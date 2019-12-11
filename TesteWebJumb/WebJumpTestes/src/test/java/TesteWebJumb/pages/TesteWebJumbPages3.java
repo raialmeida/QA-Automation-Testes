@@ -18,7 +18,7 @@ public class TesteWebJumbPages3 extends TesteWebJumbPagesBase {
 
 	public void digitarCampoYourFirstName(WebDriver driver) {
 
-		driver.findElement(By.id("first_name")).sendKeys("Raí Almeida");
+		driver.findElement(By.id("first_name")).sendKeys("Raí");
 
 	}
 
@@ -28,7 +28,7 @@ public class TesteWebJumbPages3 extends TesteWebJumbPagesBase {
 		driver.findElement(By.id("btn_one")).click();
 	}
 
-	public void selectBox(WebDriver driver) {
+	public void selectBoxExampleTwo(WebDriver driver) {
 		WebElement campotype = driver.findElement(By.id("select_box"));
 		new Select(campotype).selectByVisibleText("ExampleTwo");
 		
@@ -36,7 +36,7 @@ public class TesteWebJumbPages3 extends TesteWebJumbPagesBase {
 
 	public void verificarlogoImagem(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("imagem")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='img-responsive-center-block'][@alt ='selenium']")));
 		
 	}
 

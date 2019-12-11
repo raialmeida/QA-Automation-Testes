@@ -1,5 +1,5 @@
 
-Feature: Crie um cenario onde clicamos nos botoes "One", "Two, e "Four", 
+Feature: Crie um cenário onde clicamos nos botoes "One", "Two, e "Four", 
 depois verifique a ausencia dos mesmos e validar a imegem do logo selenium
 
 Scenario: Clicar no botao "One", "Two, e "Four" e verifique a ausencia dos mesmos

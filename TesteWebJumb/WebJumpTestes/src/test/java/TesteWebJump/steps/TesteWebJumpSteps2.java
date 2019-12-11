@@ -42,7 +42,7 @@ public class TesteWebJumpSteps2 {
 
 	@When("^selecione a opcao ExampleTwo dentro da select box$")
 	public void selecioneAOpcaoDentroDaSelectBox() throws Throwable {
-		TesteWebJumbPages.selectBox(driver);
+		TesteWebJumbPages.selectBoxExampleTwo(driver);
 
 	}
 
