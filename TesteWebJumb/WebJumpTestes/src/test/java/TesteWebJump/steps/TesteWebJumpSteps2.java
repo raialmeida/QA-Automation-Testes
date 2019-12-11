@@ -44,7 +44,7 @@ public class TesteWebJumpSteps2 {
 	public void chequeAOpcao() throws Throwable {
 		TesteWebJumbPages2.chequeAopcaoOptionThree(driver);
 
-	}
+	} 
 
 	@And("^selecione a opcao ExampleTwo dentro da select box$")
 	public void selecioneAOpcaoDentroDaSelectBox() throws Throwable {
