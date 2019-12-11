@@ -38,5 +38,9 @@ public class TesteWebJumbStepsIframeButtons {
 	public void verificarSeOsBotoesAindaEstaoNaTelaDoPainelIFRAMEBUTTONS() throws Throwable {
 		TesteWebJumbPages2.verificarAusenciaBotaoIFrameButtons(driver);
 	}
-	
+
+	@Then("^Fecha Chrome$")
+	public void fechaChrome() throws Throwable {
+		driver.quit();
+	}
 }

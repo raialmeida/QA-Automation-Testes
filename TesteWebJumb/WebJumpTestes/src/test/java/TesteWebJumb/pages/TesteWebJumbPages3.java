@@ -27,6 +27,13 @@ public class TesteWebJumbPages3 extends TesteWebJumbPagesBase {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_one")));
 		driver.findElement(By.id("btn_one")).click();
 	}
+	public void chequeAopcaoOptionThree(WebDriver driver) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_one")));
+		driver.findElement(By.id("opt_three")).click();
+		
+	}
 
 	public void selectBoxExampleTwo(WebDriver driver) {
 		WebElement campotype = driver.findElement(By.id("select_box"));
@@ -39,5 +46,7 @@ public class TesteWebJumbPages3 extends TesteWebJumbPagesBase {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='img-responsive-center-block'][@alt ='selenium']")));
 		
 	}
+
+	
 
 }

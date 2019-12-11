@@ -17,6 +17,7 @@ Given que eu acesse a pagina https://webjump-user.github.io/testqa
 When  no painel iframe buttons Buttons e exibido os botoes 'One', 'Two', e 'Four'
 And   clicar no botao 'One', 'Two', e 'Four'do painel IFRAME BUTTONS
 Then  verificar se os botoes ainda estao na tela do painel IFRAME BUTTONS
+Then Fecha Chrome
 
 Scenario: Preencher no campo 'YourFirstName' clicar no botao 'One' cheque a opção "OptionThree", 
 selecione a opcao "ExampleTwo" dentro da select box e validar a presença da imagem do logo do "Selenium Webdriver"
@@ -26,9 +27,9 @@ Given Que acesse a pagina https://webjump-user.github.io/testqa
 When digita no campo YourFirstName com o texto
 And clicar no botao One
 And cheque a opcao OptionThree
-When selecione a opcao ExampleTwo dentro da select box
+And selecione a opcao ExampleTwo dentro da select box
 Then validar a presenca da imagem do logo do Selenium Webdriver
-#Then Fecha navegador
+Then Fecha Browser
 
 
 
