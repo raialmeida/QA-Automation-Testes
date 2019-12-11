@@ -20,7 +20,7 @@ public class TesteWebJumbPages2 extends TesteWebJumbPages {
 	 */
 	public void verificarbotaoNoPaineIFrameButton(WebDriver driver) {
 
-		driver.switchTo().frame(driver.findElement(By.xpath("(//iframe[contains(@src,'buttons.html')])[1]")));
+	   driver.switchTo().frame(driver.findElement(By.xpath("(//iframe[contains(@src,'buttons.html')])[1]")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_one")));

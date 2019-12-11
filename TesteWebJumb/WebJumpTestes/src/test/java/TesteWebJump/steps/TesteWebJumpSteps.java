@@ -10,11 +10,9 @@ import cucumber.api.java.en.When;
 
 public class TesteWebJumpSteps {
 
-	
 	protected WebDriver driver;
 
 	TesteWebJumbPages TesteWebJumbPages = new TesteWebJumbPages(driver);
-	
 
 	@Given("^que eu acesse a pagina https://webjump-user\\.github\\.io/testqa/$")
 	public void queEuAcesseAPaginaHttpsWebjumpUserGithubIoTestqa() throws Throwable {
@@ -24,8 +22,8 @@ public class TesteWebJumpSteps {
 
 	@When("^no painel Buttons e exibido os botoes 'One', 'Two', e 'Four'$")
 	public void noPainelButtonsEExibidoOsBotoesOneTwoEFour() throws Throwable {
- 
-		TesteWebJumbPages.verificarbotaoNaTel(driver);  
+
+		TesteWebJumbPages.verificarbotaoNaTel(driver);
 	}
 
 	@When("^clicar no botao 'One', 'Two', e 'Four'$")
@@ -37,13 +35,8 @@ public class TesteWebJumpSteps {
 	public void verificarSeOsBotoesAindaEstaoNaTela() throws Throwable {
 		TesteWebJumbPages.verificarAusencia(driver);
 	}
-	@Then("^Fechar navegador$")
-	public void fecharNavegador() throws Throwable {
-	    driver.quit();
-	}
-	
-	
+	@Then("^Fecha navegador$")
+	public void fechaNavegador() throws Throwable {
+	    this.driver.quit();
 }
-
-
-
+}
