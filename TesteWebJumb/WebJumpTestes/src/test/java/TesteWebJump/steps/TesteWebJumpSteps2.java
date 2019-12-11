@@ -3,6 +3,7 @@ package TesteWebJump.steps;
 import org.openqa.selenium.WebDriver;
 
 import Suporte.Browser;
+import Suporte.screenshot;
 import TesteWebJumb.pages.TesteWebJumbPages3;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,8 +12,9 @@ import cucumber.api.java.en.When;
 public class TesteWebJumpSteps2 {
 
 	protected WebDriver driver;
+	
 	TesteWebJumbPages3 TesteWebJumbPages = new TesteWebJumbPages3(driver);
-
+	screenshot print = new screenshot();
 	/*
 	 * terceiro cenario
 	 * 
@@ -26,7 +28,9 @@ public class TesteWebJumpSteps2 {
 
 	@When("^digita no campo YourFirstName com o texto$")
 	public void digitaNoCampoYourFirstNameComOTexto() throws Throwable {
-		TesteWebJumbPages.digitarCampoYourFirstName(driver);
+		TesteWebJumbPages.digitarCampoYourFirstName(driver);  
+		print.Print("Digitar no campo YourFirstName o Texto");
+
 	}
 
 	@When("^clicar no botao One$")
