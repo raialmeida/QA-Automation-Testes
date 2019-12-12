@@ -3,6 +3,7 @@ package TesteWebJump.steps;
 import org.openqa.selenium.WebDriver;
 
 import Suporte.Browser;
+import Suporte.screenshot;
 import TesteWebJumb.pages.TesteWebJumbPages;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,9 +14,11 @@ public class TesteWebJumpSteps {
 	protected WebDriver driver;
 
 	TesteWebJumbPages TesteWebJumbPages = new TesteWebJumbPages(driver);
-
-	@Given("^que eu acesse a pagina https://webjump-user\\.github\\.io/testqa/$")
-	public void queEuAcesseAPaginaHttpsWebjumpUserGithubIoTestqa() throws Throwable {
+	
+	
+	
+	@Given("^que eu acesse a pagina$")
+	public void queEuAcesseAPagina() throws Throwable {
 
 		driver = Browser.Iniciadriver();
 	}
@@ -34,9 +37,11 @@ public class TesteWebJumpSteps {
 	@Then("^verificar se os botoes ainda estao na tela$")
 	public void verificarSeOsBotoesAindaEstaoNaTela() throws Throwable {
 		TesteWebJumbPages.verificarAusencia(driver);
+		screenshot print = new screenshot(); 
+		print.Print("Screenshot Cenário 1");
 	}
 	@Then("^Fecha navegador$")
 	public void fechaNavegador() throws Throwable {
-	    this.driver.quit();
+	    driver.quit();
 }
 }

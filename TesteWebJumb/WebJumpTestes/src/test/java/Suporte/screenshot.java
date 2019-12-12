@@ -15,7 +15,7 @@ public class screenshot {
 	
 	WebDriver driver = new ChromeDriver();
 	static String pastascreenshot = new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime());
-	//Funções de Apoio
+	
 	
 	public void Print(String nomePrint) throws IOException {
 	File foto = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

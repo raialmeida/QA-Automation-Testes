@@ -16,13 +16,10 @@ public class TesteWebJumpSteps2 {
 	
 	TesteWebJumbPages3 TesteWebJumbPages2 = new TesteWebJumbPages3(driver);
 	screenshot print = new screenshot();
-	/*
-	 * terceiro cenario
-	 * 
-	 */
+	
 
-	@Given("^Que acesse a pagina https://webjump-user\\.github\\.io/testqa$")
-	public void queAcesseAPaginaHttpsWebjumpUserGithubIoTestqa() throws Throwable {
+	@Given("^que eu acesse a pagina principal$")
+	public void queEuAcesseAPaginaPrincipal() throws Throwable {
 
 		driver = Browser.Iniciadriver();
 	}
@@ -30,17 +27,17 @@ public class TesteWebJumpSteps2 {
 	@When("^digita no campo YourFirstName com o texto$")
 	public void digitaNoCampoYourFirstNameComOTexto() throws Throwable {
 		TesteWebJumbPages2.digitarCampoYourFirstName(driver);  
-		print.Print("Digitar no campo YourFirstName o Texto");
+		
 
 	}
 
-	@When("^clicar no botao One$")
+	@And("^clicar no botao One$")
 	public void clicarNoBotao() throws Throwable {
 		TesteWebJumbPages2.clicarBotaoOne(driver);
 
 	}
 
-	@When("^cheque a opcao OptionThree$")
+	@And("^cheque a opcao OptionThree$")
 	public void chequeAOpcao() throws Throwable {
 		TesteWebJumbPages2.chequeAopcaoOptionThree(driver);
 
@@ -55,10 +52,11 @@ public class TesteWebJumpSteps2 {
 	@Then("^validar a presenca da imagem do logo do Selenium Webdriver$")
 	public void validarAPresenADaImagemDoLogoDoSeleniumWebdriver() throws Throwable {
 		TesteWebJumbPages2.verificarlogoImagem(driver);
+		print.Print("Screenshot Cenário 3"); 
 
 	}
 	@Then("^Fecha Browser$")
 	public void fechaBrowser() throws Throwable {
-	    driver.quit();
+	   //driver.quit();
 	}
 }
